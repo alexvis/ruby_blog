@@ -1,0 +1,6 @@
+<h1>Hello fron Blog Index</h1>
+
+
+<% @blogs.each do |blog| %>
+  <li><%= link_to blog.title, blog_path(blog.id)%></li>
+<% end %>
