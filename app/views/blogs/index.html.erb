@@ -1,6 +1,25 @@
-<h1>Hello fron Blog Index</h1>
 
+<section class="header">
+  <div class="intro">
+    <h1>BIENVENIDOS AL BLOG DE LU AMARANTE</h1>
+    <p>Curiosa por naturaleza</p>
+  </div>
+  <div class="LuImage">
+    <%=  image_tag("luProfile.png", class: "headerPic") %>
+  </div>
 
-<% @blogs.each do |blog| %>
-  <li><%= link_to blog.title, blog_path(blog.id)%></li>
-<% end %>
+</section>
+
+<section class="blogs">
+
+  <% @blogs.each do |blog| %>
+    <div class="blog-div">
+
+      <h2><%= blog.title %></h2>
+      <p><%= blog.created_at.strftime("%B").slice(0, 3) %> <%= blog.created_at.strftime("%d") %></p>
+      <p><%= blog.comment %></p>
+
+    </div>
+  <% end %>
+
+</section>
