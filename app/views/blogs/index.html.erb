@@ -1,11 +1,20 @@
+<nav>
+  <% if current_user %>
+    <% if current_user.admin? %>
+    <ul class="blog-nav">
+      <li class="lu-link"><%= link_to "Lu Page", lu_index_path %></li>
 
+    </ul>
+    <% end %>
+  <% end %>
+</nav>
 <section class="header">
   <div class="intro">
     <h1>BIENVENIDOS AL BLOG DE LU AMARANTE</h1>
     <p>Curiosa por naturaleza</p>
   </div>
   <div class="LuImage">
-    <%=  image_tag("luProfile.png", class: "headerPic") %>
+    <%=  image_tag("luProfile.png", class: "introPic") %>
   </div>
 
 </section>
@@ -14,10 +23,14 @@
 
   <% @blogs.each do |blog| %>
     <div class="blog-div">
-
+      <% if @user.profile_photo? %>
+        <%= image_tag (@user.profile_photo_url), class: "profile-picture"%>
+      <% end %>
+      <h1> <%= @user.full_name %></h1>
+      <p><%= blog.created_at.strftime("%b")%> <%= blog.created_at.strftime("%d") %></p>
       <h2><%= blog.title %></h2>
-      <p><%= blog.created_at.strftime("%B").slice(0, 3) %> <%= blog.created_at.strftime("%d") %></p>
       <p><%= blog.comment %></p>
+      <p><%= link_to 'Delete', blog, method: :delete, data: {confirm: "Are you sure?"} %></p>
 
     </div>
   <% end %>
