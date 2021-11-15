@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/carrierwaveuploader/carrierwave.git
+  revision: 7a40ef7c4d5f3033f0f8401323f80bde14ca72b9
+  specs:
+    carrierwave (3.0.0.alpha)
+      activemodel (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      addressable (~> 2.6)
+      image_processing (~> 1.1)
+      marcel (~> 1.0.0)
+      ssrf_filter (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,14 +80,6 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
-    carrierwave (2.2.2)
-      activemodel (>= 5.0.0)
-      activesupport (>= 5.0.0)
-      addressable (~> 2.6)
-      image_processing (~> 1.1)
-      marcel (~> 1.0.0)
-      mini_mime (>= 0.1.3)
-      ssrf_filter (~> 1.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
@@ -216,7 +220,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
-  carrierwave
+  carrierwave!
   devise
   jbuilder (~> 2.7)
   listen (~> 3.3)
