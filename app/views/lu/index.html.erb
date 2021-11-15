@@ -7,7 +7,7 @@
 <% end %>
 
 <% if current_user %>
-  <% if current_user.admin? %>
+  <% if current_user.admin %>
     <li><%= link_to "Homepage", root_path %></li>
 
     <h1 class="admin">Im <%= current_user.full_name %> admin bich</h1>
