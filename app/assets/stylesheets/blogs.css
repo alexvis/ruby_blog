@@ -48,3 +48,9 @@ div.blog-div {
   border: 1px solid grey;
   margin: 25px 0px 25px 0px
 }
+
+img.profile-picture {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}

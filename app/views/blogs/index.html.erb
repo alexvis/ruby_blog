@@ -23,9 +23,12 @@
 
   <% @blogs.each do |blog| %>
     <div class="blog-div">
-
-      <h2><%= blog.title %></h2>
+      <% if @user.profile_photo? %>
+        <%= image_tag (@user.profile_photo_url), class: "profile-picture"%>
+      <% end %>
+      <h1> <%= @user.full_name %></h1>
       <p><%= blog.created_at.strftime("%b")%> <%= blog.created_at.strftime("%d") %></p>
+      <h2><%= blog.title %></h2>
       <p><%= blog.comment %></p>
 
     </div>

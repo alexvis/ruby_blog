@@ -2,6 +2,7 @@
   <li class="singin"><%= link_to "Sing In", new_user_session_path%></li>
   <% else if current_user  %>
   <li class="singout"><%= link_to "Sing Out", destroy_user_session_path, method: :delete %></li>
+  <li class="edit-account"><%= link_to "Edit Account", edit_user_registration_path %></li>
   <% end %>
 <% end %>
 
