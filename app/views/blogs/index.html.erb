@@ -30,6 +30,7 @@
       <p><%= blog.created_at.strftime("%b")%> <%= blog.created_at.strftime("%d") %></p>
       <h2><%= blog.title %></h2>
       <p><%= blog.comment %></p>
+      <p><%= link_to 'Delete', blog, method: :delete, data: {confirm: "Are you sure?"} %></p>
 
     </div>
   <% end %>
