@@ -1,6 +1,6 @@
 <nav>
-  <% if current_user %>
-    <% if current_user.admin? %>
+  <% if @user %>
+    <% if @user.admin? %>
     <ul class="blog-nav">
       <li class="lu-link"><%= link_to "Lu Page", lu_index_path %></li>
 

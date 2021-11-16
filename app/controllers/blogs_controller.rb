@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
     user_id = @blogs[0].user_id
-    @user = User.find_by(id: user_id)
+    @user = User.find_by(last_name: "Amarante")
   end
 
   def show
