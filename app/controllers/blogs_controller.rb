@@ -2,11 +2,8 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
-    if current_user
-      if current_user.admin?
-        @user = current_user
-      end
-    end
+    user_id = @blogs[0].user_id
+    @user = User.find_by(id: user_id)
   end
 
   def show
