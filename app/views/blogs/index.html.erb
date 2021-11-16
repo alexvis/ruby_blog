@@ -23,7 +23,7 @@
 
   <% @blogs.each do |blog| %>
     <div class="blog-div">
-      <% if @user.profile_photo %>
+      <% if @user.profile_photo_url %>
         <%= image_tag (@user.profile_photo_url), class: "profile-picture"%>
       <% end %>
       <h1> <%= @user.full_name %></h1>
